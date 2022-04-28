@@ -87,6 +87,7 @@ visibility: hidden;
 }
 
 .course-preview {
+  max-width: 250px;
 	background-color: rgb(58 58 61 / 75%);
 	color: #fff;
 	padding: 30px;
@@ -771,5 +772,30 @@ max-width: 200px!important;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .course{
+      border-radius: 10px;
+      box-shadow: 5px 5px 12px 5px rgb(0 0 0 / 33%);
+      display: flex;
+      max-width: 100%;
+      margin: 20px;
+      margin-top: 50px;
+      overflow: hidden;
+      flex-direction: column;
+  }
+  .course-preview {
+    background-color: rgb(58 58 61 / 75%);
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+    text-align:center;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  .main-cont{
+    display: block;
   }
 }
