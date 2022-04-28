@@ -38,8 +38,6 @@
 }
 
 .textarea-input {
-    width: 350px!important;
-    max-width: 350px!important;
     height: 150px!important;
     line-height: 150%;
     resize: none;
@@ -73,7 +71,6 @@ visibility: hidden;
 	margin: 20px;
 	margin-top: 50px;
 	overflow: hidden;
-	min-width: 600px;
 }
 
 .course h6 {
@@ -93,7 +90,8 @@ visibility: hidden;
 	background-color: rgb(58 58 61 / 75%);
 	color: #fff;
 	padding: 30px;
-	width: 250px;
+	width: 100%;
+	text-align:center;
 	word-wrap: break-word;
 
 }
@@ -103,7 +101,6 @@ visibility: hidden;
 	display: inline-block;
 	font-size: 12px;
 	opacity: 0.6;
-	margin-top: 30px;
 	text-decoration: none;
 }
 
@@ -115,7 +112,7 @@ visibility: hidden;
 	width: auto;
 	color: var(--txt-color);
 	transition: .7s;
-	min-width: 400px;
+	min-width: 320px;
 }
 .course-info h2{
 display: inline-block;
@@ -126,13 +123,14 @@ transition: .7s;
 }
 
 /*lesson-edit*/
-.gomno{
+.les-create{
+z-index: 1;
 position: fixed;
 bottom: 10px;
 right: 10px;
 width: 70px;
 height: 70px;
-background-color: aqua;
+background-color: var(--form-color);
 border-radius: 100px;
 color: var(--txt-color);
 transition: .7s;
@@ -146,12 +144,13 @@ transition: .7s;
   display: none;
   position: absolute;
   top: 45px;
-  left: -20px;
+  left: -40px;
   overflow: auto;
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   backdrop-filter: blur(20px);
-  background-color: var(--color-secondary);
-  opacity: 0.86;
+  background-color: var(--form-color);
+  text-align: center;
+  z-index: 50;
+  transition: 1s;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -161,6 +160,7 @@ transition: .7s;
   color: var(--txt-color);
   padding: 5px;
   text-decoration: none;
+  transition: .7s;
 }
 .dropdown-content a:hover {
    opacity: 0.6;
@@ -179,11 +179,12 @@ transition: .7s;
 	text-indent: -9999px;
 	width: 40px;
 	height: 20px;
-	background: gray;
+	background: var(--form-color);
 	display: block;
 	border-radius: 100px;
 	position: relative;
 	transition: 0.7s;
+	margin-bottom: 10px;
 }
 
 .switch-label:after {
@@ -193,19 +194,20 @@ transition: .7s;
 	left: 1px;
 	width: 18px;
 	height: 18px;
-	background: white;
+	background: yellow;
 	border-radius: 90px;
 	transition: 0.7s;
 }
 
 .switch-box:checked + .switch-label {
-	background: white;
+	background: var(--form-color);
 }
 
 .switch-box:checked + .switch-label:after {
 	left: calc(100% - 11px);
 	transform: translateX(-50%);
-  background: gray;
+  background: black;
+  opacity: .7;
 }
 
 .switch-label:active:after {
@@ -221,7 +223,6 @@ transition: .7s;
   height: auto;
   min-height: calc(100vh - 100px);
   padding: 50px 20px;
-  padding-top: 100px;
   display: flex;
 }
 
@@ -282,7 +283,7 @@ opacity: 0.8;
 
   .button{
     width: 200px;
-    margin: 20px 100px;
+    margin: 20px 0;
     background:rgb(93 142 255 / 100%);
   }
 
@@ -459,7 +460,6 @@ body{
 }
 
 .f-button{
-margin-top: 30px;
 background-color: var(--form-color);
 border-radius: 20px;
 transition: .7s;
@@ -474,6 +474,7 @@ transition: .7s;
 }
 
 .bg-header{
+min-width:366px;
   --bs-bg-opacity:1;
   background:#212529;
   transition: 1s;
@@ -570,7 +571,7 @@ flex-direction: row;
 }
 
 
-.nav-link:focus,.nav-link:hover{color:#0a58ca}
+.nav-link:focus,.nav-link:hover{opacity:0.4}
 
 .text-secondary{
   color:white!important;

@@ -5,7 +5,8 @@ from django.views.decorators.cache import cache_page
 
 from eios_test import settings
 from .views import *
-
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 from django.conf import settings
 
