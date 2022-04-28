@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+{% block content %}
+<main>
+    {% if user.is_authenticated %}
+    <div class="wrapper justify-content-center align-items-center">
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="edit-case d-flex align-items-center justify-content-center flex-wrap flex-d-column">
+            {% csrf_token %}
+            <div class="group"> <div><label for="{{form.name.id_for_label}}" class="label">{{ form.name.label }}</label></div>{{ form.name }} </div>
+            <div class="group"> <div><label for="{{form.speciality.id_for_label}}" class="label">{{ form.speciality.label }}</label></div>{{ form.speciality }} </div>
+            <div class="group"> Фотография <label for="{{form.photo.id_for_label}}" class="custom-file-upload ddd" style="min-width: 200px; text-align:center;"><span class="inline-icon" style="background-image:url(/media/resources/icons/download.png)" ></span>{{ form.photo }}</label> </div>
+            {{form.errors}}
+            <button type="submit" class="button">Ok</button>
+            </div>
+        </form>
+    </div>
+{%endif%}
+</main>
+{%endblock%}

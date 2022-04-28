@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% block content %}
+    <main class="main-cont">
+        <div class="card__container" id="card_cont">
+          {% if lessons %}
+            {% for l in lessons %}
+            <a href="{{ l.get_absolute_url }}" style="margin: 20px;">
+              <div class="card">
+                <div class="card__image-container">
+                  {% if l.photo %}
+                    <img class="card__image" src="{{ l.photo.url }}" alt="" >
+                  {% else %}
+                  {% endif %}
+                </div>
+                  <svg class="card__svg" viewBox="0 0 800 500">
+                    <path class="path_line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#222"/>
+                    <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+                  </svg>
+                  <h3 class="card__header">{{ l.name }}</h3>
+              </div>
+            </a>
+            {% endfor %}
+
+          {% else %}
+            <h3>Почему-то пусто ┐(￣ヘ￣)┌</h3>
+          {% endif %}
+        </div>
+        
+    </main>
+<!--    <div class="text-center">-->
+<!--        {% for p in paginator.page_range %}-->
+<!--            {% if page_obj.number == p %}-->
+<!--            <span class="fs-125 px-2 txt-chg-color"> {{ p }}</span>-->
+<!--            {% else %}-->
+<!--                <a class="clear-link px-2 txt-chg-color" href="?page= {{ p }}">{{ p }}</a>-->
+<!--            {% endif %}-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            alert("{{message}}")
+        {% endfor %}
+    {% endif %}
+</script>
+{%endblock%}

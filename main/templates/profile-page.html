@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+{% block content %}
+<main>
+    <div class="wrapper justify-content-center">
+        <div class="profile-card" style="color:black">
+            <div class="profile-card__img"> <img src="{{user.avatar.url}}" > </div>
+            <div class="profile-card__cnt">
+                <div class="profile-card__name">{{user.username}}</div>
+                <div class="profile-card__full txt-chg-color"> {{ user.first_name }} {{ user.last_name }} </div>
+                <div class="profile-card__txt txt-chg-color">{% if user.content %}{{user.content}} {% else %} Описание... {% endif %}</div>
+                <div class="profile-card__foot"> {% for u in user.groups.all %} {{u}} {% endfor %}</div>
+            </div>
+        </div>
+    </div>
+</main>
+{%endblock%}

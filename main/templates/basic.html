@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/test.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <title>{{ title }}</title>
+    <script src="{% static 'js/theme-switcher.js' %}"></script>
+    {% block head %} {% endblock %}
+</head>
+<body onload="load_checkbox();">
+    <header class="p-3 bg-header">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
+              <li><a href="#" class="nav-link px-2 txt-color-white" >FAQs</a></li>
+              <li><a href="#" class="nav-link px-2 txt-color-white" >About</a></li>
+            </ul>
+              <div class="d-flex"  style="margin-left: auto;">
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="text-end d-flex align-items-center">
+                {% if user.is_authenticated %}
+                <div class="dropdown">
+                    <span class="inline-icon" style="width: 45px; height: 45px;"><img style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;" src="{{user.avatar.url}}" ></span>
+                          <div class="dropdown-content">
+                              <a href="{% url 'profile-page' %}" >Профиль</a>
+                              <a href="{% url 'edit' user.id %}">Настройки</a>
+                              {% if perms.main.add_lessons %}<a href="{% url 'lesson-view' %}">Предметы</a>{%endif%}
+                              <a href="{% url 'logout' %}">Выйти</a>
+                              <input class="switch-box" type="checkbox" id="switch" onclick="toggleTheme()" /><label class="switch-label i-block" for="switch"></label>
+                          </div>
+
+                    </div>
+                {% else %}
+              <button type="button" class="btn btn-outline-light me-2"><a class="clear-link" style="color: white;" href="{% url 'sign-in' %}">Login</a></button>
+               <button type="button" class="btn btn-warning me-2"><a class="clear-link" style="color: black;" href="{% url 'sign-up' %}">Sign-Up</a></button>
+                {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
