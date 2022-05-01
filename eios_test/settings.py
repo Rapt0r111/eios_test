@@ -87,9 +87,9 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6a3pqspthmfir',
-        'USER': 'lgdgljhlknapdh',
-        'PASSWORD': 'a2bccac79f2368394884aa9b1be0147a733456d5c6ff326fa4a1a727265ec4d2',
+        'NAME': 'd3asogu74rj5gq',
+        'USER': 'knwyuglwmmkbds',
+        'PASSWORD': '8553801091676539a0cd4441ba5b1cf552381de5e9b2a898e3032c4e3fd8680f',
         'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
@@ -144,7 +144,7 @@ MEDIA_URL = '/media/'
   
 
 if DEBUG:
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+  STATIC_DIRS = [os.path.join(BASE_DIR, 'static')]
 else:
   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
