@@ -15,31 +15,27 @@
           <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">регистрация</label>
             <a href="{% url 'sign-in' %}"> <label style="cursor: pointer;" class="tab">Войти</label></a>
-            <div class="login-form">
-              <div class="sign-in-htm">
-              <form method="POST" action="">
-                  <div class="group">
-                    {% if form.errors %}
-                        {% for key,value in form.errors.items %}
-                            {{value}}
-                        {% endfor %}
-                    {% else %}
-                    {%endif%}
-                  </div>
-                  {% csrf_token %}
-                  {% for field in form %}
-
-                          <div class="group">
-                                          <label for="{{field.id_for_label}}" class="label">{{ field.label }}</label>
-                              {{ field }}
-                          </div>
-
-                  {% endfor %}
-                <div class="group">
-                    <button type="submit" class="button">{{ button }}</button></div>
-              </form>
+            <form method="POST" action="" class="login-form">
+              <div class="group">
+                {% if form.errors %}
+                    {% for key,value in form.errors.items %}
+                        {{value}}
+                    {% endfor %}
+                {% else %}
+                {%endif%}
               </div>
-            </div>
+              {% csrf_token %}
+              {% for field in form %}
+
+                      <div class="group">
+                                      <label for="{{field.id_for_label}}" class="label">{{ field.label }}</label>
+                          {{ field }}
+                      </div>
+
+              {% endfor %}
+            <div class="group">
+                <button type="submit" class="button">{{ button }}</button></div>
+          </form>
           </div>
       </div>
 

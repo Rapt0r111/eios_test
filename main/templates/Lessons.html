@@ -8,15 +8,14 @@
                 <div class="course-preview" >
                     <h4>Тема</h4>
                     <h2>{{key.topic}}</h2>
-                    {% if object.owner_id == user.id %}<div class="f-button p-2" style="display:inline-block">
-
-                <a href="{% url 'topic-edit' key.id %}">
-                    <span class="inline-icon" style="width: 32px; height: 32px;">
-                        <img style="min-width:32px; min-height:32px; max-width:32px; object-fit: cover; max-height: 432px;" src="/media/resources/icons/pen.png" >
-                    </span>
-                </a>
-
-                </div>{% endif %}
+                    {% if object.owner_id == user.id %}
+                    <div class="f-button p-2" style="display:inline-block">
+                        <a href="{% url 'topic-edit' key.id %}">
+                            <span class="inline-icon" style="width: 32px; height: 32px;">
+                                <img style="min-width:32px; min-height:32px; max-width:32px; object-fit: cover; max-height: 432px;" src="/media/resources/icons/pen.png" >
+                            </span>
+                        </a>
+                    </div>{% endif %}
                 </div>
                 <div class="course-info">
                 {% for g in value %}

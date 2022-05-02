@@ -1,3 +1,4 @@
+from dataclasses import field
 import requests
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -16,7 +17,7 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, TemplateView, UpdateView
 
-from .forms import LoginUserForm, SignUpUserForm, EditProfile, CreateLessonForm, LessonEdit, SponsorShipsFormSet
+from .forms import LessonUpdateForm, LoginUserForm, SignUpUserForm, EditProfile, CreateLessonForm, LessonEdit, SponsorShipsFormSet
 from .models import Lessons, CustomUser, LessonsDescriptions, Files, Speciality
 
 
@@ -250,6 +251,13 @@ class LessonChangePage(LoginRequiredMixin,CreateView):
                 return redirect('/lessons/' + form.instance.lesson_id )
             else:
                 return self.form_invalid(form)
+
+class LessonUpdate(UpdateView):
+    template_name='lesson-update.html'
+    model = Lessons
+    form_class = LessonUpdateForm
+    success_url = reverse_lazy('lesson-view')
+
 
 class TopicUpdateForm(UpdateView):
     template_name='topic-update.html'

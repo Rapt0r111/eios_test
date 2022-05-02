@@ -24,7 +24,6 @@ body{
   .login-wrap{
     width:100%;
     max-width:525px;
-    min-height:670px;
     position:relative;
     background:url(https://i.pinimg.com/564x/3e/33/af/3e33af2391524fe9095e606145a6d937.jpg) no-repeat center;
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
@@ -33,7 +32,6 @@ body{
   .login-html{
     width:100%;
     height:100%;
-    position:absolute;
     padding:90px 70px 50px 70px;
     background:rgba(40,57,101,.82);
     backdrop-filter: blur(4px);

@@ -102,6 +102,15 @@ class LessonEdit(forms.ModelForm):
             'topic': forms.TextInput(attrs={'class': 'ddd', 'style': 'padding: 10px 15px;'}),
         }
 
+class LessonUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Lessons
+        fields = ('name', 'photo', 'speciality')
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'ddd'}),
+            'speciality': forms.Select(attrs={'class': 'ddd select-class'})
+        }
+
 class FileEditForm(forms.ModelForm):
     class Meta:
         model = Files
