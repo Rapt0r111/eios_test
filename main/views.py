@@ -24,6 +24,14 @@ def page_not_found_view(request, exception):
     print(123)
     return render(request, '404_page.html', status=404)
 
+class AboutPage(TemplateView):
+    template_name='about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Профиль'
+        return context
+
 class HomePage(LoginRequiredMixin,ListView):
     #paginate_by = 3 # Пагинация
     login_url = 'sign-in'

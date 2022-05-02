@@ -27,4 +27,5 @@ urlpatterns = [
     path('lesson-create', LessonCreate.as_view(), name='lesson-create'),
     path('topic-create/<slug:slug>', LessonChangePage.as_view(), name='topic-create'),
     path('topic-edit/<slug:id>', TopicUpdateForm.as_view(), name='topic-edit'),
+    path('about', AboutPage.as_view(), name='about'),
 ]

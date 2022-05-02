@@ -10,9 +10,11 @@
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/load-icon.css' %}">
+    {% block head %} 
+    {% endblock %}
     <title>{{ title }}</title>
     <script src="{% static 'js/theme-switcher.js' %}"></script>
-    {% block head %} {% endblock %}
+    
 </head>
 <body onload="load_checkbox();">
     <header class="p-3 bg-header">
@@ -21,7 +23,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
               <li><a href="#" class="nav-link px-2 txt-color-white" >FAQs</a></li>
-              <li><a href="#" class="nav-link px-2 txt-color-white" >About</a></li>
+              <li><a href="{% url 'about' %}" class="nav-link px-2 txt-color-white" >About</a></li>
             </ul>
             <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
               <defs>
