@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cyz(8&2+0s=e3^srvj7(g6vw39l-=7lxjc%vt+^=widtt8!6+1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['django-test-eios.herokuapp.com','127.0.0.1']
 
@@ -87,14 +87,23 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3asogu74rj5gq',
-        'USER': 'knwyuglwmmkbds',
-        'PASSWORD': '8553801091676539a0cd4441ba5b1cf552381de5e9b2a898e3032c4e3fd8680f',
-        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
+        'NAME': 'de3t813g9t162v',
+        'USER': 'lhcphspzysbahf',
+        'PASSWORD': '3c3e153afd10ba1fda1a2356b28a3f5e553880107644f71c9604470e8b1502eb',
+        'HOST': 'ec2-99-80-170-190.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'port2525',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
