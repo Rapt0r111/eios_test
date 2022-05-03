@@ -19,7 +19,7 @@
     <main>
     {% if user.is_authenticated %}
         <div class="wrapper justify-content-center align-items-center">
-            <div class="edit-case">
+            <div class="edit-case"  style="max-width: 99vw; word-wrap: break-word">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form_urina_rotina.management_form }}

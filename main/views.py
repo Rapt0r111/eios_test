@@ -30,7 +30,15 @@ class AboutPage(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Профиль'
+        context['title'] = 'О сайте'
+        return context
+
+class TopPage(TemplateView):
+    template_name='top-page.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Прикольчики'
         return context
 
 class HomePage(LoginRequiredMixin,ListView):

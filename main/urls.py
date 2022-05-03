@@ -29,4 +29,5 @@ urlpatterns = [
     path('topic-edit/<slug:id>', TopicUpdateForm.as_view(), name='topic-edit'),
     path('lesson-edit/<slug:slug>', LessonUpdate.as_view(), name='lesson-edit'),
     path('about', AboutPage.as_view(), name='about'),
+    path('top-page', TopPage.as_view(), name='top-page'),
 ]
