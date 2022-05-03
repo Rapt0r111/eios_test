@@ -13,8 +13,8 @@
 .pl {
 	animation-name: bump;
 	animation-timing-function: linear;
-	width: 3em;
-	height: 3em;
+	width: 45px;
+	height: 45px;
 }
 .pl__ring {
 	stroke: hsla(var(--hue),10%,10%,0.1);
