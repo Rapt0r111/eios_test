@@ -475,8 +475,9 @@ transition: .7s;
 
 .inline-icon {
   background-size: 100%;
-  width:32px; 
-  height:32px;
+  min-width: 32px;
+  height: 32px;
+  max-width: 32px;
   display:inline-block;
   vertical-align:bottom;
 }

@@ -19,7 +19,7 @@
                 </div>
                 <div class="course-info">
                 {% for g in value %}
-                    <div style="margin-bottom: 10px;">{% if g.topic_content %}<a class="clear-link" href="{{g.topic_content.url}}">{% if g.file_type %}<span class="inline-icon" style="background-image: url({{ g.file_type.url }})"></span>{%endif%}{%endif%}<h2>{{ g.name }}</h2></a></div>
+                    <div style="margin-bottom: 10px;">{% if g.topic_content %}<a class="clear-link" href="{{g.topic_content.url}}" style="display: flex;">{% if g.file_type %}<span class="inline-icon" style="background-image: url({{ g.file_type.url }})"></span>{%endif%}{%endif%}<h2 style="word-break:break-all">{{ g.name }}</h2></a></div>
                     {% endfor %}
                 </div>
 
