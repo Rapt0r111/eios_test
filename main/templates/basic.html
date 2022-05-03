@@ -25,16 +25,7 @@
               <li><a href="#" class="nav-link px-2 txt-color-white" >FAQs</a></li>
               <li><a href="{% url 'about' %}" class="nav-link px-2 txt-color-white" >About</a></li>
             </ul>
-            <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="hsl(193,90%,55%)" />
-                  <stop offset="100%" stop-color="hsl(223,90%,55%)" />
-                </linearGradient>
-              </defs>
-              <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
-              <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
-            </svg>
+           
               <div class="d-flex"  style="margin-left: auto;">
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
               <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
@@ -42,7 +33,17 @@
             <div class="text-end d-flex align-items-center">
                 {% if user.is_authenticated %}
                 <div class="dropdown">
-                    <span class="inline-icon" style="width: 45px; height: 45px;"><img style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;" src="{{user.avatar.url}}" ></span>
+                  <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" style="position: absolute;top: 0px;/* left: 60px; */;left: 0px; z-index: 1;">
+                    <defs>
+                      <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="hsl(193,90%,55%)"></stop>
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)"></stop>
+                      </linearGradient>
+                    </defs>
+                    <circle style="visibility: hidden;" class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round"></circle>
+                    <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10"></path>
+                  </svg>
+                    <span class="inline-icon" style="    width: 45px;height: 45px;animation-name: bump;animation-timing-function: linear; animation-duration: 3s; animation-iteration-count: infinite;"><img style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;" src="{{user.avatar.url}}" ></span>
                           <div class="dropdown-content">
                               <a href="{% url 'profile-page' %}" >Профиль</a>
                               <a href="{% url 'edit' user.id %}">Настройки</a>
