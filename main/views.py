@@ -65,6 +65,7 @@ class LessonPage(LoginRequiredMixin,DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['title'] = context['object']
         test = {}
         x = [x for x in LessonsDescriptions.objects.filter(lesson_id=context['object'])]
         g = Files.objects.filter(lesDesc_id__in=x)
