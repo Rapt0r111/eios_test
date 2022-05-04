@@ -397,7 +397,7 @@ body{
 .main-cont{
   display: flex;
   height:100%;
-  margin: 0 15vw;
+  margin: 0 calc(50% - 559px);
   justify-content: center;
 }
 
@@ -810,8 +810,8 @@ max-width: 200px!important;
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   .main-cont{
-    margin: 0 0vw;
+    margin: 0 0;
   }
 }
