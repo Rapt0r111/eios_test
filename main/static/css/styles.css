@@ -286,7 +286,7 @@ opacity: 0.8;
 
   .button{
     width: 200px;
-    margin: 20px 0;
+    margin: 20px auto;
     background:rgb(93 142 255 / 100%);
   }
 
