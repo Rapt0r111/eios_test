@@ -164,7 +164,7 @@ class EditProfile(LoginRequiredMixin,UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Профиль'
+        context['title'] = 'Изменить профиль'
         return context
 
 class LessonEditPage(PermissionRequiredMixin,LoginRequiredMixin,ListView):
@@ -266,6 +266,11 @@ class LessonUpdate(UpdateView):
     model = Lessons
     form_class = LessonUpdateForm
     success_url = reverse_lazy('lesson-view')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Изменение предмета'
+        return context
 
 
 class TopicUpdateForm(UpdateView):
