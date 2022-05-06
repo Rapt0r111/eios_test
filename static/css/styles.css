@@ -213,6 +213,7 @@ input[type="file"] {
   background: black;
   border-radius: 90px;
   transition: 0.7s;
+  opacity: .5;
 }
 
 .switch-box:checked+.switch-label {
@@ -223,7 +224,6 @@ input[type="file"] {
   left: calc(100% - 11px);
   transform: translateX(-50%);
   background: yellow;
-  opacity: .7;
 }
 
 .switch-label:active:after {
