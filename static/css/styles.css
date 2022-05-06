@@ -7,6 +7,8 @@
   --bs-gray: #6c757d;
   --txt-color: black;
   --form-color: rgb(95 91 181 / 20%);
+  --theme-icon:yellow;
+  --theme-opacity: 1;
 
   --bg-shape-color: linear-gradient(120deg, #343A4F, #0F1620);
   --lightblue: #3D9DEA;
@@ -22,6 +24,8 @@
   --bs-gray: #6c757d;
   --txt-color: white;
   --form-color: rgba(255, 255, 255, .1);
+  --theme-icon:black;
+  --theme-opacity: .5;
 
   --bg-shape-color: linear-gradient(120deg, #343A4F, #0F1620);
   --lightblue: #3D9DEA;
@@ -210,10 +214,10 @@ input[type="file"] {
   left: 1px;
   width: 18px;
   height: 18px;
-  background: black;
+  background: var(--theme-icon);
   border-radius: 90px;
   transition: 0.7s;
-  opacity: .5;
+  opacity: var(--theme-opacity);
 }
 
 .switch-box:checked+.switch-label {
@@ -223,7 +227,8 @@ input[type="file"] {
 .switch-box:checked+.switch-label:after {
   left: calc(100% - 11px);
   transform: translateX(-50%);
-  background: yellow;
+  background: var(--theme-icon);
+  opacity: var(--theme-opacity);
 }
 
 .switch-label:active:after {

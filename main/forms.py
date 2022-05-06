@@ -63,13 +63,11 @@ class SignUpUserForm(UserCreationForm):
     email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'class': 'input'}))
     class Meta:
         model = CustomUser
-        fields = ('username','email','first_name','last_name', 'password1', 'password2')
+        fields = ('username','email', 'password1', 'password2')
         widgets = {
             'password1': forms.PasswordInput(attrs={'class': 'input'}),
             'password2': forms.PasswordInput(attrs={'class': 'input'}),
             'username': forms.TextInput(attrs={'class': 'input'}),
-            'first_name': forms.TextInput(attrs={'class': 'input'}),
-            'last_name': forms.TextInput(attrs={'class': 'input'}),
             'email' : forms.EmailInput(attrs={'class': 'input'}),
             # 'content': forms.TextInput(attrs={'class': 'input'}),
         }
