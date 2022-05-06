@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
 *,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-body{
-    height: 100vh;
-    background-color: var(--c-blue-900);
+body {
+  height: 100vh;
+  background-color: var(--c-blue-900);
   color: var(--c-blue-100);
 }
+
 :root {
   --c-blue-900: #081030;
   --c-blue-800: #111b40;
@@ -25,7 +27,7 @@ body{
 
 /* Some basic CSS overrides */
 main {
-    height: 90%;
+  height: 90%;
   line-height: 1.5;
   font-family: "Outfit", sans-serif;
   display: -webkit-box;
@@ -33,12 +35,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  
+  -ms-flex-pack: center;
+  justify-content: center;
+
   padding: 10vh 12px;
 }
 
@@ -52,9 +54,11 @@ textarea {
 a {
   color: inherit;
 }
-.price-section{
-    margin: 15px;
+
+.price-section {
+  margin: 15px;
 }
+
 /* End basic CSS override */
 .price-table {
   background-color: var(--c-blue-700);
@@ -66,10 +70,10 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   background-image: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(29, 123, 219, 0.1) 20%, var(--c-blue-700) 40%, var(--c-blue-700) 100%);
 }
@@ -95,10 +99,10 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 4px;
   position: relative;
   color: #fff;
@@ -134,7 +138,7 @@ a {
   position: relative;
 }
 
-.feature + .feature {
+.feature+.feature {
   margin-top: 16px;
 }
 
@@ -143,8 +147,8 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   list-style: none;
 }
 
@@ -165,7 +169,7 @@ a {
 
 .feature[open] div {
   -webkit-animation: scale 0.15s ease;
-          animation: scale 0.15s ease;
+  animation: scale 0.15s ease;
 }
 
 .feature .checkmark {
@@ -177,11 +181,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-right: 12px;
 }
 
@@ -196,8 +200,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 6px;
   cursor: pointer;
 }
@@ -210,35 +214,38 @@ a {
   top: -12px;
   z-index: 100;
   -webkit-transform: translatey(-100%) translatex(-50%);
-          transform: translatey(-100%) translatex(-50%);
+  transform: translatey(-100%) translatex(-50%);
   -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
+  transform-origin: bottom center;
   width: 80%;
   left: 50%;
   border: 1px solid var(--c-blue-300);
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
 @-webkit-keyframes scale {
   0% {
     -webkit-transform: translatey(-100%) translatex(-50%) scale(0);
-            transform: translatey(-100%) translatex(-50%) scale(0);
+    transform: translatey(-100%) translatex(-50%) scale(0);
   }
+
   100% {
     -webkit-transform: translatey(-100%) translatex(-50%) scale(1);
-            transform: translatey(-100%) translatex(-50%) scale(1);
+    transform: translatey(-100%) translatex(-50%) scale(1);
   }
 }
 
 @keyframes scale {
   0% {
     -webkit-transform: translatey(-100%) translatex(-50%) scale(0);
-            transform: translatey(-100%) translatex(-50%) scale(0);
+    transform: translatey(-100%) translatex(-50%) scale(0);
   }
+
   100% {
     -webkit-transform: translatey(-100%) translatex(-50%) scale(1);
-            transform: translatey(-100%) translatex(-50%) scale(1);
+    transform: translatey(-100%) translatex(-50%) scale(1);
   }
 }
+
 /*# sourceMappingURL=style.css.map */
