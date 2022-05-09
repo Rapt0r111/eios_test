@@ -87,10 +87,10 @@ CACHES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'de3t813g9t162v',
-        'USER': 'lhcphspzysbahf',
-        'PASSWORD': '3c3e153afd10ba1fda1a2356b28a3f5e553880107644f71c9604470e8b1502eb',
-        'HOST': 'ec2-99-80-170-190.eu-west-1.compute.amazonaws.com',
+        'HOST': 'ec2-54-76-43-89.eu-west-1.compute.amazonaws.com',
+        'NAME': 'da56s4e4a45p1k',
+        'USER': 'mbkjlcbznrhuxc',
+        'PASSWORD': '140b71f2ffcdbfc737b13608048d9f8f4da2dba5926db4b2da8853f81c96e8ed',
         'PORT': '5432',
     }
 }
